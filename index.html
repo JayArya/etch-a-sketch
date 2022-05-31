@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>Etch-a-Sketch</header>
+    <div class="content">
+      <div class="grid-container"></div>
+      <div class="grid-controls">
+        <div class="buttons">
+          <button onclick="changeColor('black')" class="choice-buttons">
+            black
+          </button>
+          <button onclick="changeColor('white')" class="choice-buttons">
+            white
+          </button>
+          <button onclick="changeColor('random')" class="choice-buttons">
+            random
+          </button>
+          <button onclick="resetGrid()" class="choice-buttons">reset</button>
+        </div>
+        <div class="grid-size">
+          <input
+            type="range"
+            min="16"
+            max="100"
+            value="16"
+            class="slider"
+            id="grid-size-range"
+            onchange="redrawGrid(this.value)"
+          />
+          <h5 class="current-range">
+            Size: <span id="grid-current-size">16</span>
+          </h5>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Copyright &copy; 2022 JayArya
+      <a href="https://github.com/JayArya" target="_blank"
+        ><img
+          class="github-icon"
+          src="./assets/GitHub-Mark-Light-32px.png"
+          alt="GitHub-Mark"
+      /></a>
+    </footer>
+  </body>
+</html>
